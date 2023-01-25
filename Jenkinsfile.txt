@@ -3,7 +3,7 @@ pipeline {
     stages {
         stage('Get_Playbook') {
             steps {
-                git 'https://github.com/sanjayapradhan/ansiblerepo.git'
+                git credentialsId: '4aded876-7aaa-450d-b02c-b71ca1b005c1', url: 'https://github.com/sanjayapradhan/ansiblerepo.git'
             }
         }
         stage('Run_Playbook') {
